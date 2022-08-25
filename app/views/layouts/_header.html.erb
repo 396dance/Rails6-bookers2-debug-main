@@ -1,15 +1,22 @@
+
+
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      
+
+      <!--タイトル「Bookers」-->
       <a class="navbar-brand" href="/"><span>Bookers</span></a>
+
+      <!--ハンバーガーメニュー-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
-      <!--ハンバーガーメニュー-->
+
+
+      <!--ハンバーガーの中にメニュー入れる-->
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
+
         <% if user_signed_in? %>
           <li>
             <%= link_to user_path(current_user),class: 'nav-link text-light' do %>
@@ -28,7 +35,7 @@
           </li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete,class: 'nav-link text-light' do %>
-              <i class="fas fa-sign-out-alt"></i> log out
+              <i class="fas fa-sign-out-alt"></i> logout
             <% end %>
           </li>
         <% else %>
@@ -44,7 +51,7 @@
           </li>
           <li>
             <%= link_to new_user_registration_path,class: 'nav-link text-light' do %>
-              <i class="fas fa-user-plus"></i> signup
+              <i class="fas fa-user-plus"></i> sign up
             <% end %>
           </li>
           <li>

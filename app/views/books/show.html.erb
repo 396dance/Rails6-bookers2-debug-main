@@ -1,17 +1,24 @@
 <div class='container'>
   <div class='row'>
     <div class='col-md-3'>
+
+    <!--プロフィール  -->
       <h2>User info</h2>
       <%= render 'users/info' %>
+
+    <!--Bookの投稿フォーム-->
       <h2 class="mt-3">New book</h2>
       <%= render 'form', book: @book %>
     </div>
+
+
+    <!--Book詳細-->
     <div class='col-md-8 offset-md-1'>
   		<h2>Book detail</h2>
   		<table class='table'>
   		  <tr>
           <td><%= link_to(@book.user) do %>
-            <%= image_tag @book.user.get_profile_image, size:"100x100" %><br>
+            <%= image_tag @book.user.get_profile_image(100,100) %><br>
             <%= @book.user.name %>
             <% end %>
           </td>
@@ -22,5 +29,6 @@
         </tr>
       </table>
     </div>
+
   </div>
 </div>
