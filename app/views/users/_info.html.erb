@@ -1,20 +1,20 @@
 
 <!--ユーザープロフィール-->
 <table class='table'>
-  <tr><%= image_tag current_user.get_profile_image(100,100) %></tr>
+  <tr><%= image_tag user.get_profile_image(100,100) %></tr>
   <tr>
 	  <th>name</th>
-	  <th><%= current_user.name %></th>
+	  <th><%= user.name %></th>
   </tr>
   <tr>
 	  <th>introduction</th>
-	  <th><%= current_user.introduction %></th>
+	  <th><%= user.introduction %></th>
   </tr>
 </table>
 
 <!--プロフィール編集ボタン-->
 <div class='row'>
-  <%= link_to edit_user_path(current_user), class: "btn btn-outline-secondary btn-block" do %>
+  <%= link_to edit_user_path(user), class: "btn btn-outline-secondary btn-block" do %>
     <i class="fas fa-user-cog"></i>
   <% end %>
 </div>
