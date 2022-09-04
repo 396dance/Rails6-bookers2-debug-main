@@ -15,4 +15,6 @@ Rails.application.routes.draw do
       get 'followeings' => 'relationships#unfollows', as: 'unfollows'
   end
 
+  get "search" => "searches#search"
+
 end
